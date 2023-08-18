@@ -270,7 +270,7 @@ header {
     color: #fff;
     background-attachment: scroll;
     /* 메인 이미지 */
-    background-image: url('{{ site.baseurl }}/img/header-bg.jpg');
+    background-image: url('{{ site.baseurl }}/img/header-bg2.jpg');
     /* background-image: url(/img/main.jpg); */
     background-position: center center;
     background-repeat: none;
