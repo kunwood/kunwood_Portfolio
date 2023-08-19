@@ -270,14 +270,15 @@ header {
     color: #fff;
     background-attachment: scroll;
     /* 메인 이미지 */
-    background-image: url('{{ site.baseurl }}/img/main.jpg');
-    /* background-image: url(/img/main.jpg); */
+    background-image: url('{{ site.baseurl }}/img/header-bg.jpg');
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    /* 메인 페이지 높이 */
+    height: 90rem;
 }
 
 header .intro-text {
@@ -293,18 +294,34 @@ header .intro-text .intro-lead-in {
     line-height: 22px;
 }
 
+.typed {
+
+  }
+    
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+
 header .intro-text .intro-heading {
+    display: inline-block;
     margin-bottom: 25px;
     text-transform: uppercase;
-    font-family: {{ site.data.template.font.primary }};
-    font-size: 50px;
+    font-size: 100px;
     font-weight: 700;
-    line-height: 50px;
+    line-height: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing;
+    animation-duration: 3s;
+    animation-timing-function: steps(40, end);
+    animation-fill-mode: forwards;
 }
 
 @media(min-width:768px) {
     header .intro-text {
-        padding-top: 300px;
+        padding-top: 150px;
         padding-bottom: 200px;
     }
 
@@ -549,7 +566,7 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     .timeline:before {
-        left: 50%;
+        /* left: 50%; */
     }
 
     .timeline>li {
